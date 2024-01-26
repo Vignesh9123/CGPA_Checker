@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College CGPA Calculator</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;500;600;800;900&display=swap');
+        ::-webkit-scrollbar{
+            width:8px;
+        }
+        ::-webkit-scrollbar-track{
+            background-color: transparent;
+            
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: gray;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway';
+            font-weight: 500;
+        }
+        body{
+            background-color: rgb(44, 43, 43);
+            color: white;
+        }
+        .card{
+            display: flex;
+            justify-content: space-evenly;
+            height: 100px;
+            align-items: center;
+            background: rgb(0,0,0,0.5);
+            color: white;
+            border-bottom: 2px solid rgb(58, 55, 55);
+        }
+        .subm{
+        height: 100%;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 50px;
+        }
+        input,select{
+            padding: 0 5px;
+            width: 300px;
+            height: 30px;
+            border-radius: 10px;
+            border: none ;
+        }
+        #nosubs::placeholder{
+            padding: 10px;
+        }
+        .subm button{
+            padding: 5px 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #7c787891;
+            color: white;
+            outline: none;
+        }
+        .subm button:hover{
+            background-color: #50505091;
+            transition: 200ms;
+
+        }
+        #mcsub{
+            padding: 5px 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #60bf4091;
+            color: white;
+            display: flex;
+            margin: 20px auto;
+            visibility: hidden;
+        }
+        button{
+            cursor: pointer;
+        }
+        #mcsub:hover{
+            background-color:#468a2f91 ;
+            transition: 200ms;
+
+        }
+        #tryagain{
+            padding: 5px 30px;
+            border: none;
+            border-radius: 10px;
+            background-color: #7c787891;
+            color: white;
+            outline: none;
+            display: flex;
+            margin: auto;
+            visibility: hidden;
+        }
+        .finalcgpa{
+            display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    height: 66vh;
+    border: 1px solid white;
+    border-radius: 103px;
+    margin: 24px;
+    background-color: rgb(74 177 74 / 21%);
+        }
+        .finalcgpa div:nth-child(2) {
+    background: red;
+    padding: 10px;
+    border-radius: 10px;
+}
+form{
+    height: 60vh;
+}
+.finalcgpa div {
+    font-weight: 800;
+    font-size: 40px;
+}
+    </style>
+</head>
+<body>
+    <form onsubmit="return false">
+
+        <div class="subm">
+            <label for="nosubs">Enter number of subjects</label>
+            <input min="1"step="1" pattern="\d+" type="number" name="nosubs" id="nosubs"placeholder="Enter number of subjects" required>
+            <input type="submit" id="nosubssubm">
+        </div>
+    </form>
+
+    <button id="mcsub">Submit</button>
+    <button id="tryagain">Try again</button>
+    <script src="script.js"></script>
+</body>
+</html>
