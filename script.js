@@ -22,7 +22,7 @@ nosubssubm.addEventListener("click",()=>{
         credits.innerHTML='<label for="cred">Enter credits: </label><select "id="cred" class="credits"><option value="">Please choose the  number of credits</option><option value="1.5">1.5</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>'
         let marks = document.createElement("div")
         marks.className = "marks"
-        marks.innerHTML = `<label for="mark">Enter marks: </label><input placeholder = "Enter marks for Subject ${i+1}" type="text" id="mark" class="mark">`
+        marks.innerHTML = `<label for="mark">Enter marks: </label><input placeholder = "Enter marks for Subject ${i+1}" type="number" id="mark" class="mark">`
         div.append(subname,credits,marks)
         document.getElementById("mcsub").insertAdjacentElement("beforebegin",div)
     }
